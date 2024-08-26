@@ -60,6 +60,11 @@
   display: none !important
 }
 
+/* Space before and after tabs */
+.titlebar-spacer {
+  display: none;
+}
+
 /* --- ~END~ element visibility section --- */
 
 /* Navbar size calc */
