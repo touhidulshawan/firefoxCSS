@@ -25,7 +25,29 @@
 #back-button,
 #forward-button
 {
-  display: none !important
+  transform: scale(1, 1) !important;
+  transition: margin-left 150ms var(--animation-easing-function),
+    opacity 250ms var(--animation-easing-function),
+    transform 350ms var(--animation-easing-function) !important;
+}
+#back-button[disabled="true"],
+#forward-button[disabled="true"] {
+  margin-left: -34px !important;
+  opacity: 0 !important;
+  transform: scale(0.8, 0.8) !important;
+  pointer-events: none !important;
+}
+/* Hide the hamburger menu */
+#PanelUI-menu-button {
+  padding: 0px !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-icon {
+  width: 1px !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-badge-stack {
+  padding: 0px !important;
 }
 
 /* Extensions button */
@@ -69,7 +91,7 @@
 
 /* Navbar size calc */
 :root{
---tab-border-radius: 6px !important; /*  Tab border radius -- Changes the tabs rounding  *//*  Default: 6px  */
+--tab-border-radius: 4px !important; /*  Tab border radius -- Changes the tabs rounding  *//*  Default: 6px  */
 --NavbarWidth: 43; /*  Default values: 36 - 43  */
 --TabsHeight: 36; /*  Minimum: 30  *//*  Default: 36  */
 --TabsBorder: 8; /*  Doesnt do anything on small layout  *//*  Default: 8  */
